@@ -3,12 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Page</title>
+    <title>Styled Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+
+        h1 {
+            color: #4facfe;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #007bff;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome!</h1>
-    <p>This is a simple HTML file.</p>
+    <div class="card">
+        <h1>Hello 👋</h1>
+        <p>This is a styled HTML page with a button.</p>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText = "Button clicked! 🎉";
+        }
+    </script>
 
 </body>
 </html>
